@@ -17,7 +17,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Leozin - Web Developer</title>
+        <title>Leozin - Portfólio</title>
       </Head>
 
       <HomeContent>
