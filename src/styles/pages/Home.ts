@@ -40,7 +40,7 @@ export const HomeText = styled.div`
 
   span {
     color: ${(props) => props.theme.colors.primary};
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 800;
   }
 `;
