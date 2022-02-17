@@ -1,74 +1,57 @@
 import styled from "styled-components";
+import { Container } from "../layout";
 
 export const Header = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 100px;
+  align-items: center;
+  height: 10vh;
+`;
 
+export const Logo = styled.div`
+  a,
+  a span {
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+`;
+
+export const Navbar = styled.div`
   ul {
-    list-style-type: none;
     li {
+      list-style-type: none;
       display: inline;
-      padding: 10px;
-      a {
-        transition: 0.1s;
-        display: inline-block;
-        position: relative;
+    }
 
-        &:hover:after {
-          content: "";
-          width: 80%;
-          height: 2px;
-          background: ${(props) => props.theme.colors.primary};
-          display: block;
-          position: absolute;
-          margin-top: 5px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
+    a {
+      padding: 20px;
     }
   }
 `;
+
+export const HomeContent = styled.div``;
 
 export const HomeText = styled.div`
-  font-size: 4.5rem;
-  font-weight: 800;
-  width: 800px;
-  line-height: 80px;
+  height: 60vh;
+  display: flex;
+  align-items: center;
 
-  span {
-    color: ${(props) => props.theme.colors.primary};
-    font-size: 4.5rem;
+  p,
+  p span {
+    font-size: 4rem;
     font-weight: 800;
   }
-`;
 
-export const HomeImage = styled.div``;
+  p {
+    max-width: 600px;
 
-export const Logo = styled.h1`
-  > a {
-    font-size: 1.3rem;
-    font-weight: 800;
-
-    > span {
-      color: ${(props) => props.theme.colors.gray4};
-      font-size: 1.3rem;
-      font-weight: 600;
+    span {
+      color: ${(props) => props.theme.colors.primary};
     }
   }
 `;
 
-export const HomeContent = styled.div`
-  height: 100vh;
-
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-
-  img {
-    position: absolute;
-    bottom: 0;
-  }
+export const HomeImage = styled.div`
+  height: 30vh;
+  background: url("/waves.svg");
 `;

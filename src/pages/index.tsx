@@ -5,6 +5,7 @@ import {
   Logo,
   HomeContent,
   HomeImage,
+  Navbar,
 } from "../styles/pages/Home";
 import Head from "next/head";
 import Link from "next/link";
@@ -18,8 +19,9 @@ const Home: NextPage = () => {
       <Head>
         <title>Leozin - Web Developer</title>
       </Head>
-      <Container>
-        <HomeContent>
+
+      <HomeContent>
+        <Container>
           <Header>
             <Logo>
               <Link href="">
@@ -28,40 +30,45 @@ const Home: NextPage = () => {
                 </a>
               </Link>
             </Logo>
-            <ul>
-              <li>
-                <Link href="">
-                  <a>home</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="">
-                  <a>sobre</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="">
-                  <a>skills</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="">
-                  <a>github</a>
-                </Link>
-              </li>
-              <li>
-                <Button1>contato</Button1>
-              </li>
-            </ul>
+
+            <Navbar>
+              <ul>
+                <li>
+                  <Link href="">
+                    <a>home</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="">
+                    <a>sobre</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="">
+                    <a>skills</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="">
+                    <a>github</a>
+                  </Link>
+                </li>
+                <li>
+                  <Button1>contato</Button1>
+                </li>
+              </ul>
+            </Navbar>
           </Header>
 
           <HomeText>
-            Oi, bem vindo ao meu <span>portfólio</span> :p
+            <p>
+              Oi, bem vindo ao meu <span>portfólio</span> :p
+            </p>
           </HomeText>
+        </Container>
 
-          <HomeImage>#IMAGE</HomeImage>
-        </HomeContent>
-      </Container>
+        <HomeImage></HomeImage>
+      </HomeContent>
 
       <br />
       <br />
