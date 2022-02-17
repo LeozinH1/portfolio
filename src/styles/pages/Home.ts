@@ -58,4 +58,6 @@ export const HomeText = styled.div`
 export const HomeImage = styled.div`
   height: 30vh;
   background: url("/waves.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
 `;
