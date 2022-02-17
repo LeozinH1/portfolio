@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Creators</title>
       </Head>
-      <Header>MIAR</Header>
+      <Header>oi meu nome é leozin, me da um emprego</Header>
     </>
   );
 };
