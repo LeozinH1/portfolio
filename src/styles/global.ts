@@ -13,6 +13,15 @@ export default createGlobalStyle`
         color: ${(props) => props.theme.colors.text};
     }
 
+    a{
+        text-decoration: none;
+        color: ${(props) => props.theme.colors.text}
+    }
+
+    button, input[type='button']{
+        cursor: pointer;
+    }
+
     ::-moz-selection {
         color: ${(props) => props.theme.colors.text};
         background: ${(props) => props.theme.colors.primary};
