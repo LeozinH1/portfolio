@@ -27,6 +27,10 @@ export const Navbar = styled.div`
       padding: 20px;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const HomeContent = styled.div``;
