@@ -11,7 +11,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { Container } from "../styles/layout";
 import Button1 from "../components/Button1";
-import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
@@ -49,8 +48,8 @@ const Home: NextPage = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="">
-                    <a>github</a>
+                  <Link href="https://github.com/LeozinH1">
+                    <a target={"_blank"}>github</a>
                   </Link>
                 </li>
                 <li>
