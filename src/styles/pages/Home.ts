@@ -5,7 +5,7 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 100px;
 `;
 
 export const Logo = styled.div`
@@ -33,12 +33,21 @@ export const Navbar = styled.div`
   }
 `;
 
-export const HomeContent = styled.div``;
+export const HomeContent = styled.div`
+  height: 100vh;
+  position: relative;
+
+  ${Container} {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+`;
 
 export const HomeText = styled.div`
-  height: 60vh;
   display: flex;
   align-items: center;
+  flex: 1;
 
   p,
   p span {
@@ -55,7 +64,6 @@ export const HomeText = styled.div`
   }
 `;
 
-export const HomeImage = styled.div`
-  height: 30vh;
-  position: relative;
+export const Blank = styled.div`
+  height: 250px; // Waves height
 `;
