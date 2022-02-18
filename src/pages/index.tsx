@@ -11,6 +11,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { Container } from "../styles/layout";
 import Button1 from "../components/Button1";
+import Wave from "react-wavify";
 
 const Home: NextPage = () => {
   return (
@@ -66,7 +67,45 @@ const Home: NextPage = () => {
           </HomeText>
         </Container>
 
-        <HomeImage></HomeImage>
+        <HomeImage>
+          <Wave
+            fill="#8D1DFC"
+            paused={false}
+            options={{
+              height: 10,
+              amplitude: 30,
+              speed: 0.15,
+              points: 5,
+            }}
+            opacity="0.4"
+            style={{ position: "absolute", bottom: "-7px" }}
+          />
+
+          <Wave
+            fill="#8D1DFC"
+            paused={false}
+            options={{
+              height: 20,
+              amplitude: 30,
+              speed: 0.17,
+              points: 4,
+            }}
+            opacity="0.5"
+            style={{ position: "absolute", bottom: "-7px" }}
+          />
+
+          <Wave
+            fill="#8D1DFC"
+            paused={false}
+            options={{
+              height: 50,
+              amplitude: 30,
+              speed: 0.19,
+              points: 3,
+            }}
+            style={{ position: "absolute", bottom: "-7px" }}
+          />
+        </HomeImage>
       </HomeContent>
 
       <br />
