@@ -49,7 +49,11 @@ const Home: NextPage = () => {
                   </Link>
                 </li>
                 <li>
+<<<<<<< Updated upstream
                   <Link href="https://github.com/LeozinH1">
+=======
+                  <Link href="https://github.com/leozinh1">
+>>>>>>> Stashed changes
                     <a target={"_blank"}>github</a>
                   </Link>
                 </li>
