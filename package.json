@@ -9,13 +9,15 @@
   },
   "dependencies": {
     "from": "^0.1.7",
+    "hamburger-react": "^2.4.1",
     "import": "^0.0.6",
     "next": "12.0.10",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-wavify": "^1.5.4",
     "styled": "^1.0.0",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "styled-icons": "^10.45.0"
   },
   "devDependencies": {
     "@types/node": "17.0.18",

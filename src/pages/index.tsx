@@ -6,12 +6,15 @@ import {
   HomeContent,
   Blank,
   Navbar,
+  ToggleNav,
 } from "../styles/pages/Home";
 import Head from "next/head";
 import Link from "next/link";
 import { Container } from "../styles/layout";
 import Button1 from "../components/Button1";
 import Wave from "react-wavify";
+
+import { Squash as Hamburger } from "hamburger-react";
 
 const Home: NextPage = () => {
   return (
@@ -32,6 +35,10 @@ const Home: NextPage = () => {
             </Logo>
 
             <Navbar>
+              <ToggleNav>
+                <Hamburger />
+              </ToggleNav>
+
               <ul>
                 <li>
                   <Link href="">
@@ -75,10 +82,10 @@ const Home: NextPage = () => {
           options={{
             height: 10,
             amplitude: 30,
-            speed: 0.15,
+            speed: 0.1,
             points: 3,
           }}
-          opacity="0.7"
+          opacity="0.3"
           style={{ position: "absolute", bottom: "0px", height: "250px" }}
         />
 
@@ -88,7 +95,7 @@ const Home: NextPage = () => {
           options={{
             height: 10,
             amplitude: 30,
-            speed: 0.15,
+            speed: 0.1,
             points: 4,
           }}
           opacity="0.5"
@@ -101,7 +108,7 @@ const Home: NextPage = () => {
           options={{
             height: 10,
             amplitude: 30,
-            speed: 0.15,
+            speed: 0.1,
             points: 5,
           }}
           opacity="1.0"

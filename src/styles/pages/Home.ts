@@ -16,6 +16,10 @@ export const Logo = styled.div`
   }
 `;
 
+export const ToggleNav = styled.div`
+  display: none;
+`;
+
 export const Navbar = styled.div`
   ul {
     li {
@@ -29,7 +33,13 @@ export const Navbar = styled.div`
   }
 
   @media screen and (max-width: 800px) {
-    display: none;
+    ul {
+      display: none;
+    }
+
+    ${ToggleNav} {
+      display: block;
+    }
   }
 `;
 
