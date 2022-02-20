@@ -13,10 +13,18 @@ import Link from "next/link";
 import { Container } from "../styles/layout";
 import Button1 from "../components/Button1";
 import Wave from "react-wavify";
+import { useCallback, useState } from "react";
 
-import { Squash as Hamburger } from "hamburger-react";
+import { Sling as Hamburger } from "hamburger-react";
 
 const Home: NextPage = () => {
+  const [navbarClass, setNavbarClass] = useState("");
+
+  const hamburgerClick = useCallback((toggled) => {
+    if (toggled) setNavbarClass("show");
+    if (!toggled) setNavbarClass("hide");
+  }, []);
+
   return (
     <>
       <Head>
@@ -34,11 +42,7 @@ const Home: NextPage = () => {
               </Link>
             </Logo>
 
-            <Navbar>
-              <ToggleNav>
-                <Hamburger />
-              </ToggleNav>
-
+            <Navbar className={navbarClass}>
               <ul>
                 <li>
                   <Link href="">
@@ -64,6 +68,10 @@ const Home: NextPage = () => {
                   <Button1>contato</Button1>
                 </li>
               </ul>
+
+              <ToggleNav>
+                <Hamburger onToggle={(toggled) => hamburgerClick(toggled)} />
+              </ToggleNav>
             </Navbar>
           </Header>
 
