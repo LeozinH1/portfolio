@@ -21,8 +21,7 @@ const Home: NextPage = () => {
   const [navbarClass, setNavbarClass] = useState("");
 
   const hamburgerClick = useCallback((toggled) => {
-    if (toggled) setNavbarClass("show");
-    if (!toggled) setNavbarClass("hide");
+    toggled ? setNavbarClass("show") : setNavbarClass("hide");
   }, []);
 
   return (

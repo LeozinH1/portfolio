@@ -172,5 +172,5 @@ export const HomeText = styled.div`
 `;
 
 export const Blank = styled.div`
-  height: 250px; // Waves height
+  height: 250px; // Waves max height
 `;
