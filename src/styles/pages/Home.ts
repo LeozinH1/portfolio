@@ -113,7 +113,6 @@ export const Navbar = styled.div`
         height: 100%;
         width: 100%;
         z-index: 3;
-        // background: blue;
       }
     }
   }
@@ -135,12 +134,16 @@ export const Navbar = styled.div`
         display: block;
         padding: 10px 30px;
 
+        &.slider {
+          display: none;
+        }
+
         a {
           display: block;
           border-radius: 5px;
 
           &:hover {
-            background: rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.1);
           }
         }
 
