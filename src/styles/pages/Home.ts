@@ -2,19 +2,23 @@ import styled from "styled-components";
 import { Container } from "../layout";
 
 export const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
+  ${Container} {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
 
   @media screen and (max-width: 800px) {
-    position: fixed;
-    left: 0;
-    right: 0;
-    padding: 0 20px;
-    height: 80px;
-    background: ${(props) => props.theme.colors.background};
-    z-index: 1;
+    ${Container} {
+      position: fixed;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: ${(props) => props.theme.colors.background};
+      z-index: 1;
+    }
   }
 `;
 
@@ -80,13 +84,37 @@ export const Navbar = styled.div`
   }
 
   ul {
+    position: relative;
+    display: flex;
+    list-style: none;
+
     li {
       list-style-type: none;
-      display: inline;
-    }
+      display: flex;
+      align-items: center;
 
-    a {
-      padding: 20px;
+      &.slider {
+        position: absolute;
+        display: inline-block;
+        height: 0.4em;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
+        bottom: 0px;
+        height: 100%;
+        border-radius: 5px;
+        background-color: ${(props) => props.theme.colors.primary};
+        z-index: 2;
+        width: 20px;
+      }
+
+      a {
+        position: relative;
+        display: inline-block;
+        padding: 0.7em 1.5em;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        // background: blue;
+      }
     }
   }
 
@@ -131,46 +159,47 @@ export const Navbar = styled.div`
 
 export const HomeContent = styled.div`
   height: 100vh;
-  position: relative;
-
-  ${Container} {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-flow: column;
 `;
 
 export const HomeText = styled.div`
-  display: flex;
-  align-items: center;
-  flex: 1;
+  flex-grow: 1;
 
-  p,
-  p span {
-    font-size: 4rem;
-    font-weight: 800;
-  }
+  ${Container} {
+    display: flex;
+    align-items: center;
+    flex: 1;
 
-  p {
-    max-width: 600px;
+    p,
+    p span {
+      font-size: 4rem;
+      font-weight: 800;
+    }
 
-    span {
-      color: ${(props) => props.theme.colors.primary};
+    p {
+      max-width: 600px;
+
+      span {
+        color: ${(props) => props.theme.colors.primary};
+      }
     }
   }
 
   @media screen and (max-width: 800px) {
-    p,
-    p span {
-      font-size: 3rem;
-    }
+    ${Container} {
+      p,
+      p span {
+        font-size: 3rem;
+      }
 
-    p {
-      max-width: 500px;
+      p {
+        max-width: 500px;
+      }
     }
   }
 `;
 
-export const Blank = styled.div`
-  height: 250px; // Waves max height
+export const Waves = styled.div`
+  position: relative;
 `;
