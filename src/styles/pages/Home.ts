@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { Container } from "../layout";
 
+export const HomeContent = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+`;
+
 export const Header = styled.div`
   ${Container} {
     display: flex;
@@ -18,6 +24,8 @@ export const Header = styled.div`
       height: 80px;
       background: ${(props) => props.theme.colors.background};
       z-index: 1;
+      margin: 0;
+      padding: 20px;
     }
   }
 `;
@@ -101,7 +109,7 @@ export const Navbar = styled.div`
         bottom: 0px;
         height: 100%;
         border-radius: 5px;
-        background-color: ${(props) => props.theme.colors.primary};
+        background-color: ${(props) => props.theme.colors.gray1};
         z-index: 2;
         width: 20px;
       }
@@ -160,47 +168,56 @@ export const Navbar = styled.div`
   }
 `;
 
-export const HomeContent = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-flow: column;
-`;
-
-export const HomeText = styled.div`
+export const Main = styled.div`
   flex-grow: 1;
 
   ${Container} {
     display: flex;
     align-items: center;
-    flex: 1;
-
-    p,
-    p span {
-      font-size: 4rem;
-      font-weight: 800;
-    }
-
-    p {
-      max-width: 600px;
-
-      span {
-        color: ${(props) => props.theme.colors.primary};
-      }
-    }
+    justify-content: space-between;
   }
 
   @media screen and (max-width: 800px) {
     ${Container} {
-      p,
-      p span {
-        font-size: 3rem;
-      }
-
-      p {
-        max-width: 500px;
-      }
+      flex-flow: column-reverse;
+      margin-top: 80px; // Header Height
     }
   }
+`;
+
+export const HomeText = styled.div`
+  flex: 1;
+  p,
+  p span {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  p {
+    span {
+      color: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    p,
+    p span {
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    p {
+      max-width: 500px;
+    }
+  }
+`;
+
+export const HomeArt = styled.div`
+  position: relative;
+  flex: 1;
+  height: 70%;
+  width: 100%;
 `;
 
 export const Waves = styled.div`

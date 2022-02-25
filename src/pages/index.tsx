@@ -7,13 +7,16 @@ import {
   Navbar,
   ToggleNav,
   Waves,
+  Main,
+  HomeArt,
 } from "../styles/pages/Home";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "../styles/layout";
 import Button1 from "../components/Button1";
 import Wave from "react-wavify";
-import { useCallback, useState, useRef, LiHTMLAttributes } from "react";
+import { useCallback, useState, useRef } from "react";
 
 import { Sling as Hamburger } from "hamburger-react";
 
@@ -28,15 +31,15 @@ const Home: NextPage = () => {
   const [width, setWidth] = useState(0);
   const [left, setLeft] = useState(0);
 
-  const teste = useRef<any>(null);
+  const ulnav = useRef<any>(null);
 
   const mouseOverHandle = (el: any) => {
     const elWidth = el.target?.getBoundingClientRect().width;
     const elLeft =
       el.target?.getBoundingClientRect().left -
-      teste.current.getBoundingClientRect().left;
+      ulnav.current.getBoundingClientRect().left;
 
-    // teste.current.offsetLeft
+    // ulnav.current.offsetLeft
 
     setOpacity(1);
     setWidth(elWidth);
@@ -65,7 +68,7 @@ const Home: NextPage = () => {
             </Logo>
 
             <Navbar className={navbarClass}>
-              <ul ref={teste}>
+              <ul ref={ulnav}>
                 <li
                   onMouseOver={(el) => mouseOverHandle(el)}
                   onMouseOut={() => mouseOutHandle()}
@@ -119,13 +122,19 @@ const Home: NextPage = () => {
           </Container>
         </Header>
 
-        <HomeText>
+        <Main>
           <Container>
-            <p>
-              Oi, bem vindo ao meu <span>portfólio</span> :p
-            </p>
+            <HomeText>
+              <p>
+                Oi, bem vindo ao meu <span>portfólio</span> :p
+              </p>
+            </HomeText>
+
+            <HomeArt>
+              <Image src={"/art.svg"} alt="Art" layout={"fill"} />
+            </HomeArt>
           </Container>
-        </HomeText>
+        </Main>
 
         <Waves>
           <Wave
@@ -138,7 +147,7 @@ const Home: NextPage = () => {
               points: 3,
             }}
             opacity="0.3"
-            style={{ position: "relative", bottom: "0px", height: "250px" }}
+            style={{ position: "relative", bottom: "0px", height: "200px" }}
           />
 
           <Wave
@@ -155,7 +164,7 @@ const Home: NextPage = () => {
               position: "absolute",
               left: "0px",
               bottom: "0px",
-              height: "200px",
+              height: "150px",
             }}
           />
 
@@ -173,7 +182,7 @@ const Home: NextPage = () => {
               position: "absolute",
               left: "0px",
               bottom: "0px",
-              height: "150px",
+              height: "100px",
             }}
           />
         </Waves>
