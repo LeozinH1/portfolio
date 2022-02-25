@@ -202,7 +202,7 @@ export const HomeText = styled.div`
   @media screen and (max-width: 800px) {
     p,
     p span {
-      font-size: 3rem;
+      font-size: 2.4rem;
       text-align: center;
       margin-top: 40px;
     }
@@ -221,7 +221,7 @@ export const HomeArt = styled.div`
 
   @media screen and (max-width: 800px) {
     flex: inherit;
-    height: 30%;
+    height: 50%;
   }
 `;
 
