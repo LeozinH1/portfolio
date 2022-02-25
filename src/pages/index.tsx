@@ -105,8 +105,13 @@ const Home: NextPage = () => {
                   </Link>
                 </li>
 
-                <li>
-                  <Button1>contato</Button1>
+                <li
+                  onMouseOver={(el) => mouseOverHandle(el)}
+                  onMouseOut={() => mouseOutHandle()}
+                >
+                  <Link href="">
+                    <a>contato</a>
+                  </Link>
                 </li>
 
                 <li

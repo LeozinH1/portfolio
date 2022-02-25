@@ -10,8 +10,9 @@ export const ButtonStyle = styled.button`
   font-size: 0.9rem;
 
   &:hover {
-    filter: grayscale(0.2);
-    box-shadow: 0px 0px 8px ${(props) => props.theme.colors.gray2};
+    // filter: grayscale(0.2);
+    // box-shadow: 0px 0px 8px ${(props) => props.theme.colors.gray2};
+    background: ${(props) => props.theme.colors.gray1};
   }
 
   &:disabled {
