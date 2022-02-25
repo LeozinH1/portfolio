@@ -218,6 +218,11 @@ export const HomeArt = styled.div`
   flex: 1;
   height: 70%;
   width: 100%;
+
+  @media screen and (max-width: 800px) {
+    flex: inherit;
+    height: 30%;
+  }
 `;
 
 export const Waves = styled.div`
