@@ -110,7 +110,7 @@ const Home: NextPage = () => {
                   onMouseOut={() => mouseOutHandle()}
                 >
                   <Link href="">
-                    <a>contato</a>
+                    <a>🙋 contato</a>
                   </Link>
                 </li>
 
@@ -131,7 +131,7 @@ const Home: NextPage = () => {
           <Container>
             <HomeText>
               <p>
-                Oi, bem vindo ao meu <span>portfólio</span> :p
+                Oi, bem vindo ao meu <span>portfólio</span>.
               </p>
             </HomeText>
 
