@@ -15,9 +15,9 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "../styles/layout";
-import Button1 from "../components/Button1";
 import Wave from "react-wavify";
 import { useCallback, useState, useRef } from "react";
+import Tilt from "react-parallax-tilt";
 
 import { Sling as Hamburger } from "hamburger-react";
 
@@ -131,19 +131,35 @@ const Home: NextPage = () => {
         <Main>
           <Container>
             <HomeText>
-              <p>
-                Oi, bem vindo ao meu <span>portfólio</span>.
-              </p>
+              <Tilt
+                scale={0.99}
+                transitionSpeed={2500}
+                tiltMaxAngleX={10}
+                tiltMaxAngleY={10}
+                tiltAngleYInitial={-5}
+              >
+                <p>
+                  Olá! Me chamo <span>Leonardo</span>, bem vindo ao meu site.
+                </p>
+              </Tilt>
             </HomeText>
 
             <HomeArt>
-              <Image
-                src="/art3.png"
-                alt="Art"
-                layout="fill"
-                objectFit="contain"
-                objectPosition="center"
-              />
+              <Tilt
+                scale={0.99}
+                transitionSpeed={2500}
+                tiltMaxAngleX={10}
+                tiltMaxAngleY={10}
+                tiltAngleYInitial={5}
+              >
+                <Image
+                  src="/art3.png"
+                  alt="Art"
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
+                />
+              </Tilt>
             </HomeArt>
           </Container>
         </Main>

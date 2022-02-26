@@ -188,7 +188,7 @@ export const HomeText = styled.div`
   flex: 1;
   p,
   p span {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 800;
   }
 
@@ -213,10 +213,16 @@ export const HomeText = styled.div`
 `;
 
 export const HomeArt = styled.div`
-  position: relative;
   flex: 1;
   height: 70%;
   width: 100%;
+
+  // Tilt
+  > div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
 
   @media screen and (max-width: 800px) {
     flex: inherit;

@@ -2062,6 +2062,11 @@ react-is@^16.13.1, react-is@^16.7.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-parallax-tilt@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.6.1.tgz#459d3aec2fb4f7a38b1460f5a962e277540c9345"
+  integrity sha512-XK8v2BaD5tK+ewFG/D6XAFGanb5Dao4oCQDuMEZ4dtC8/w0SrGA55hXh+efg90F9l1UaosE9war71USOJNF43w==
+
 react-wavify@^1.5.4:
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/react-wavify/-/react-wavify-1.5.4.tgz#99e4491262fccf464e7cd04417a5f335e1e6eda5"
