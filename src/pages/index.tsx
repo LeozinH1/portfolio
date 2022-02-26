@@ -153,7 +153,7 @@ const Home: NextPage = () => {
                 tiltAngleYInitial={5}
               >
                 <Image
-                  src="/art3.png"
+                  src="/art.png"
                   alt="Art"
                   layout="fill"
                   objectFit="contain"
