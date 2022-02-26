@@ -201,7 +201,10 @@ const Home: NextPage = () => {
       </HomeContent>
 
       <Container>
-        <EmContrucao>Em construção👷‍♂️</EmContrucao>
+        <EmContrucao>
+          <p>Em construção</p>
+          <Image src="/building.svg" alt="Building" width={300} height={300} />
+        </EmContrucao>
       </Container>
     </>
   );

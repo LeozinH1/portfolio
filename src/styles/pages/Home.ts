@@ -228,8 +228,12 @@ export const Waves = styled.div`
   position: relative;
 `;
 
-export const EmContrucao = styled.h1`
-  font-size: 2rem;
+export const EmContrucao = styled.div`
   text-align: center;
   margin-top: 100px;
+
+  p {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
 `;
