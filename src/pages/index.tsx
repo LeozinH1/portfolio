@@ -9,6 +9,7 @@ import {
   Waves,
   Main,
   HomeArt,
+  EmContrucao,
 } from "../styles/pages/Home";
 import Head from "next/head";
 import Link from "next/link";
@@ -136,14 +137,20 @@ const Home: NextPage = () => {
             </HomeText>
 
             <HomeArt>
-              <Image src={"/art.svg"} alt="Art" layout={"fill"} />
+              <Image
+                src="/art3.png"
+                alt="Art"
+                layout="fill"
+                objectFit="contain"
+                objectPosition="center"
+              />
             </HomeArt>
           </Container>
         </Main>
 
         <Waves>
           <Wave
-            fill="#8D1DFC"
+            fill="#202024"
             paused={false}
             options={{
               height: 10,
@@ -156,7 +163,7 @@ const Home: NextPage = () => {
           />
 
           <Wave
-            fill="#8D1DFC"
+            fill="#202024"
             paused={false}
             options={{
               height: 10,
@@ -174,7 +181,7 @@ const Home: NextPage = () => {
           />
 
           <Wave
-            fill="#8D1DFC"
+            fill="#202024"
             paused={false}
             options={{
               height: 10,
@@ -193,28 +200,9 @@ const Home: NextPage = () => {
         </Waves>
       </HomeContent>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <Container>
+        <EmContrucao>Em construção👷‍♂️</EmContrucao>
+      </Container>
     </>
   );
 };

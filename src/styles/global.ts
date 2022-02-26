@@ -11,6 +11,12 @@ export default createGlobalStyle`
     html, body {
         background: ${(props) => props.theme.colors.background};
         color: ${(props) => props.theme.colors.text};
+
+
+    }
+
+    body{
+        height: 200vh;
     }
 
     a{

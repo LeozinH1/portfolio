@@ -228,3 +228,9 @@ export const HomeArt = styled.div`
 export const Waves = styled.div`
   position: relative;
 `;
+
+export const EmContrucao = styled.h1`
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 100px;
+`;
