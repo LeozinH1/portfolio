@@ -133,8 +133,7 @@ export const Navbar = styled.div`
       right: -50%;
       top: 80px; // Header size
       bottom: 0;
-      background: rgba(20, 20, 20, 0.85);
-      backdrop-filter: blur(2em);
+      background: ${(props) => props.theme.colors.background};
       z-index: 1;
       text-align: center;
 
