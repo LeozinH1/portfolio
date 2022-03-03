@@ -327,44 +327,44 @@ const Home: NextPage = () => {
             </About>
             <AboutTimeline>
               <ul ref={ulnav2}>
-                <li
-                  onClick={() => tlclick(1)}
-                  className={item1}
-                  onMouseEnter={(el) => mouseOverHandle2(el)}
-                  onMouseLeave={() => mouseOutHandle2()}
-                >
+                <li onClick={() => tlclick(1)} className={item1}>
                   <h2>1998</h2>
                   <span>Spawned in the world</span>
+
+                  <div
+                    onMouseEnter={(el) => mouseOverHandle2(el)}
+                    onMouseLeave={() => mouseOutHandle2()}
+                  />
                 </li>
 
-                <li
-                  onClick={() => tlclick(2)}
-                  className={item2}
-                  onMouseEnter={(el) => mouseOverHandle2(el)}
-                  onMouseLeave={() => mouseOutHandle2()}
-                >
+                <li onClick={() => tlclick(2)} className={item2}>
                   <h2>2004-2012</h2>
                   <span>Ensino Fundamental</span>
+
+                  <div
+                    onMouseEnter={(el) => mouseOverHandle2(el)}
+                    onMouseLeave={() => mouseOutHandle2()}
+                  />
                 </li>
 
-                <li
-                  onClick={() => tlclick(3)}
-                  className={item3}
-                  onMouseEnter={(el) => mouseOverHandle2(el)}
-                  onMouseLeave={() => mouseOutHandle2()}
-                >
+                <li onClick={() => tlclick(3)} className={item3}>
                   <h2>2013-2015</h2>
                   <span>Ensino Médio</span>
+
+                  <div
+                    onMouseEnter={(el) => mouseOverHandle2(el)}
+                    onMouseLeave={() => mouseOutHandle2()}
+                  />
                 </li>
 
-                <li
-                  onClick={() => tlclick(4)}
-                  className={item4}
-                  onMouseEnter={(el) => mouseOverHandle2(el)}
-                  onMouseLeave={() => mouseOutHandle2()}
-                >
+                <li onClick={() => tlclick(4)} className={item4}>
                   <h2>2016-2019</h2>
                   <span>Ensino Superior</span>
+
+                  <div
+                    onMouseEnter={(el) => mouseOverHandle2(el)}
+                    onMouseLeave={() => mouseOutHandle2()}
+                  />
                 </li>
 
                 <li

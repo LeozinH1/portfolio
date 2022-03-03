@@ -279,6 +279,16 @@ export const AboutTimeline = styled.div`
       cursor: pointer;
       z-index: 2;
 
+      > div {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 5px;
+      }
+
       &.slider {
         position: absolute;
         transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
