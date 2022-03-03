@@ -275,8 +275,20 @@ export const AboutTimeline = styled.div`
       text-align: right;
       position: relative;
       color: ${(props) => props.theme.colors.gray4};
+      cursor: pointer;
+      z-index: 2;
 
-      &:after {
+      &.slider {
+        position: absolute;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
+
+        border-radius: 5px;
+        background-color: ${(props) => props.theme.colors.gray1};
+        z-index: 1;
+        height: 80px;
+      }
+
+      &:not(:last-child):after {
         content: "";
         width: 15px;
         height: 15px;
@@ -290,9 +302,7 @@ export const AboutTimeline = styled.div`
         z-index: 2;
       }
 
-      &:hover {
-        background: ${(props) => props.theme.colors.gray1};
-        cursor: pointer;
+      &.active {
         border-radius: 5px;
         color: ${(props) => props.theme.colors.text};
 
@@ -305,6 +315,7 @@ export const AboutTimeline = styled.div`
         font-weight: 700;
         font-size: 1.3rem;
       }
+
       span {
       }
     }
@@ -338,6 +349,13 @@ export const SectionSkills = styled.div`
 `;
 
 export const TimeLineText = styled.div`
+  div {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
   h2 {
     font-size: 1.3rem;
     font-weight: 600;

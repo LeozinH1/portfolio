@@ -68,6 +68,57 @@ const Home: NextPage = () => {
     setOpacity(0);
   };
 
+  const [item1, setItem1] = useState("active");
+  const [item2, setItem2] = useState("");
+  const [item3, setItem3] = useState("");
+  const [item4, setItem4] = useState("");
+
+  const tlclick = (index: number) => {
+    setItem1("");
+    setItem2("");
+    setItem3("");
+    setItem4("");
+
+    switch (index) {
+      case 1:
+        setItem1("active");
+        break;
+
+      case 2:
+        setItem2("active");
+        break;
+
+      case 3:
+        setItem3("active");
+        break;
+
+      case 4:
+        setItem4("active");
+        break;
+    }
+  };
+
+  const [opacity2, setOpacity2] = useState(0);
+  const [height, setHeight] = useState(0);
+  const [top, setTop] = useState(0);
+
+  const ulnav2 = useRef<any>(null);
+
+  const mouseOverHandle2 = (el: any) => {
+    const elHeight = el.target?.getBoundingClientRect().height;
+    const elTop =
+      el.target?.getBoundingClientRect().top -
+      ulnav2.current.getBoundingClientRect().top;
+
+    setOpacity2(1);
+    setTop(elTop);
+    setHeight(elHeight);
+  };
+
+  const mouseOutHandle2 = () => {
+    setOpacity2(0);
+  };
+
   return (
     <>
       <Head>
@@ -259,37 +310,113 @@ const Home: NextPage = () => {
               </AboutArt>
             </About>
             <AboutTimeline>
-              <ul>
-                <li>
+              <ul ref={ulnav2}>
+                <li
+                  onClick={() => tlclick(1)}
+                  className={item1}
+                  onMouseEnter={(el) => mouseOverHandle2(el)}
+                  onMouseLeave={() => mouseOutHandle2()}
+                >
                   <h2>1998</h2>
                   <span>Spawned in the world</span>
                 </li>
-                <li>
+
+                <li
+                  onClick={() => tlclick(2)}
+                  className={item2}
+                  onMouseEnter={(el) => mouseOverHandle2(el)}
+                  onMouseLeave={() => mouseOutHandle2()}
+                >
                   <h2>2004-2012</h2>
                   <span>Ensino Fundamental</span>
                 </li>
-                <li>
+
+                <li
+                  onClick={() => tlclick(3)}
+                  className={item3}
+                  onMouseEnter={(el) => mouseOverHandle2(el)}
+                  onMouseLeave={() => mouseOutHandle2()}
+                >
                   <h2>2013-2015</h2>
                   <span>Ensino Médio</span>
                 </li>
-                <li>
+
+                <li
+                  onClick={() => tlclick(4)}
+                  className={item4}
+                  onMouseEnter={(el) => mouseOverHandle2(el)}
+                  onMouseLeave={() => mouseOutHandle2()}
+                >
                   <h2>2016-2019</h2>
                   <span>Ensino Superior</span>
                 </li>
+
+                <li
+                  className="slider"
+                  style={{ height: height, top: top, opacity: opacity2 }}
+                ></li>
               </ul>
 
               <TimeLineText>
-                <h2>O COMEÇO DE TUDO</h2>
+                <div className={item1}>
+                  <h2>O COMEÇO DE TUDO</h2>
 
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                  tristique molestie enim in lacinia. Maecenas bibendum vel elit
-                  ac finibus. Cras dui diam, rutrum lobortis odio a, hendrerit
-                  dictum ligula. Aenean eu tincidunt nisi. Sed eget tempus
-                  mauris, in rutrum libero. Sed eget tempus mauris, in rutrum
-                  libero. Mauris scelerisque ultricies odio, in gravida mi
-                  pellentesque at. Praesent finibus maximus sapien ac porta.
-                </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    tristique molestie enim in lacinia. Maecenas bibendum vel
+                    elit ac finibus. Cras dui diam, rutrum lobortis odio a,
+                    hendrerit dictum ligula. Aenean eu tincidunt nisi. Sed eget
+                    tempus mauris, in rutrum libero. Sed eget tempus mauris, in
+                    rutrum libero. Mauris scelerisque ultricies odio, in gravida
+                    mi pellentesque at. Praesent finibus maximus sapien ac
+                    porta.
+                  </p>
+                </div>
+
+                <div className={item2}>
+                  <h2>ENSINO FUNDAMENTAL</h2>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    tristique molestie enim in lacinia. Maecenas bibendum vel
+                    elit ac finibus. Cras dui diam, rutrum lobortis odio a,
+                    hendrerit dictum ligula. Aenean eu tincidunt nisi. Sed eget
+                    tempus mauris, in rutrum libero. Sed eget tempus mauris, in
+                    rutrum libero. Mauris scelerisque ultricies odio, in gravida
+                    mi pellentesque at. Praesent finibus maximus sapien ac
+                    porta.
+                  </p>
+                </div>
+
+                <div className={item3}>
+                  <h2>ENSINO MÉDIO</h2>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    tristique molestie enim in lacinia. Maecenas bibendum vel
+                    elit ac finibus. Cras dui diam, rutrum lobortis odio a,
+                    hendrerit dictum ligula. Aenean eu tincidunt nisi. Sed eget
+                    tempus mauris, in rutrum libero. Sed eget tempus mauris, in
+                    rutrum libero. Mauris scelerisque ultricies odio, in gravida
+                    mi pellentesque at. Praesent finibus maximus sapien ac
+                    porta.
+                  </p>
+                </div>
+
+                <div className={item4}>
+                  <h2>ENSINO SUPERIOR</h2>
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                    tristique molestie enim in lacinia. Maecenas bibendum vel
+                    elit ac finibus. Cras dui diam, rutrum lobortis odio a,
+                    hendrerit dictum ligula. Aenean eu tincidunt nisi. Sed eget
+                    tempus mauris, in rutrum libero. Sed eget tempus mauris, in
+                    rutrum libero. Mauris scelerisque ultricies odio, in gravida
+                    mi pellentesque at. Praesent finibus maximus sapien ac
+                    porta.
+                  </p>
+                </div>
               </TimeLineText>
             </AboutTimeline>
           </AboutContent>
