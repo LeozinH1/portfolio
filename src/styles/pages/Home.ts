@@ -239,7 +239,7 @@ export const SectionAbout = styled.section``;
 
 export const SectionTitle = styled.h1`
   text-align: center;
-  margin: 100px 0;
+  margin: 50px 0;
   font-size: 2.5rem;
   font-weight: 700;
 `;
