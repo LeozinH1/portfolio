@@ -444,7 +444,7 @@ const Home: NextPage = () => {
           <SectionTitle>SKILLS</SectionTitle>
           <SkillsContent>
             <div>
-              <Skill percentage={"50%"}>
+              <Skill percentage={"95%"}>
                 <h2>HTML & CSS</h2>
                 <div></div>
               </Skill>
@@ -454,64 +454,64 @@ const Home: NextPage = () => {
                 <div></div>
               </Skill>
 
-              <Skill percentage={"100%"}>
+              <Skill percentage={"80%"}>
                 <h2>React & Next</h2>
                 <div></div>
               </Skill>
 
-              <Skill percentage={"10%"}>
+              <Skill percentage={"15%"}>
                 <h2>React Native</h2>
                 <div></div>
               </Skill>
             </div>
             <div>
-              <Skill percentage={"10%"}>
+              <Skill percentage={"95%"}>
                 <h2>Node</h2>
                 <div></div>
               </Skill>
-              <Skill percentage={"10%"}>
+              <Skill percentage={"90%"}>
                 <h2>SQL</h2>
                 <div></div>
               </Skill>
-              <Skill percentage={"10%"}>
+              <Skill percentage={"87%"}>
                 <h2>NoSQL</h2>
                 <div></div>
               </Skill>
-              <Skill percentage={"10%"}>
+              <Skill percentage={"85%"}>
                 <h2>Typescript</h2>
                 <div></div>
               </Skill>
-              <Skill percentage={"10%"}>
+              <Skill percentage={"80%"}>
                 <h2>PHP</h2>
                 <div></div>
               </Skill>
-              <Skill percentage={"10%"}>
+              <Skill percentage={"75%"}>
                 <h2>Docker</h2>
                 <div></div>
               </Skill>
-              <Skill percentage={"10%"}>
+              <Skill percentage={"70%"}>
                 <h2>Laravel</h2>
                 <div></div>
               </Skill>
-              <Skill percentage={"10%"}>
+              <Skill percentage={"30%"}>
                 <h2>Python</h2>
                 <div></div>
               </Skill>
             </div>
             <div>
-              <Skill percentage={"10%"}>
+              <Skill percentage={"95%"}>
                 <h2>Adobe XD</h2>
                 <div></div>
               </Skill>
-              <Skill percentage={"10%"}>
-                <h2>Github</h2>
+              <Skill percentage={"80%"}>
+                <h2>Git</h2>
                 <div></div>
               </Skill>
-              <Skill percentage={"10%"}>
+              <Skill percentage={"50%"}>
                 <h2>Adobe Photoshop</h2>
                 <div></div>
               </Skill>
-              <Skill percentage={"10%"}>
+              <Skill percentage={"40%"}>
                 <h2>Adobe Premiere</h2>
                 <div></div>
               </Skill>

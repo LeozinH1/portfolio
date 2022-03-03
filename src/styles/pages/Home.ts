@@ -399,6 +399,21 @@ export const Skill = styled.div<SkillProps>`
   h2 {
     font-size: 1rem;
     font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  transition: 0.3s;
+  transform: scale(0.97);
+  border-radius: 5px;
+  padding: 10px;
+
+  &:hover {
+    transform: scale(1);
+    background: ${(props) => props.theme.colors.gray1};
+
+    div {
+      background: ${(props) => props.theme.colors.gray2};
+    }
   }
 
   margin-bottom: 20px;
@@ -469,9 +484,12 @@ export const Social = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: 0.2s;
+        transform: scale(0.95);
 
         &:hover {
           background: ${(props) => props.theme.colors.gray0};
+          transform: scale(1);
         }
       }
     }
