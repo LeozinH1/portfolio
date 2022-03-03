@@ -234,12 +234,213 @@ export const Waves = styled.div`
   position: relative;
 `;
 
-export const EmContrucao = styled.div`
+export const SectionAbout = styled.section``;
+
+export const SectionTitle = styled.h1`
   text-align: center;
+  margin: 100px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+`;
+
+export const AboutContent = styled.div``;
+
+export const About = styled.div`
+  display: flex;
+`;
+
+export const AboutTimeline = styled.div`
   margin-top: 100px;
+  display: flex;
+
+  ul {
+    list-style-type: none;
+    position: relative;
+    margin-right: 50px;
+
+    &:after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      background: ${(props) => props.theme.colors.gray1};
+      display: block;
+      position: absolute;
+      right: -13px;
+      top: 0;
+    }
+
+    li {
+      padding: 10px;
+      width: 300px;
+      text-align: right;
+      position: relative;
+      color: ${(props) => props.theme.colors.gray4};
+
+      &:after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background: ${(props) => props.theme.colors.gray1};
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+      }
+
+      &:hover {
+        background: ${(props) => props.theme.colors.gray1};
+        cursor: pointer;
+        border-radius: 5px;
+        color: ${(props) => props.theme.colors.text};
+
+        &:after {
+          background: ${(props) => props.theme.colors.primary};
+        }
+      }
+
+      h2 {
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+      span {
+      }
+    }
+  }
+`;
+
+export const AboutText = styled.div`
+  width: 50%;
+  color: ${(props) => props.theme.colors.gray4};
+  line-height: 2rem;
+  text-align: justify;
+`;
+
+export const AboutArt = styled.div`
+  position: relative;
+  width: 50%;
+  height: 300px;
+`;
+
+export const SectionSkills = styled.div`
+  background: ${(props) => props.theme.colors.gray0};
+  border-top: 1px solid ${(props) => props.theme.colors.gray2};
+  border-bottom: 1px solid ${(props) => props.theme.colors.gray2};
+  margin-top: 50px;
+
+  ${Container} {
+    ${SectionTitle} {
+      margin-top: 50px;
+    }
+  }
+`;
+
+export const TimeLineText = styled.div`
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
 
   p {
-    font-size: 2.5rem;
-    font-weight: 700;
+    color: ${(props) => props.theme.colors.gray4};
+    line-height: 2rem;
+    text-align: justify;
   }
+`;
+
+export const SkillsContent = styled.div`
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+
+  div {
+    flex: 1;
+  }
+`;
+
+type SkillProps = {
+  percentage: string;
+};
+
+export const Skill = styled.div<SkillProps>`
+  h2 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  margin-bottom: 20px;
+
+  div {
+    width: 100%;
+    height: 5px;
+    background: ${(props) => props.theme.colors.gray1};
+    border-radius: 5px;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: ${(props) => props.percentage};
+      background: ${(props) => props.theme.colors.primary};
+      border-radius: 5px;
+    }
+  }
+`;
+
+export const SectionContact = styled.section`
+  ${Container} {
+    ${SectionTitle} {
+      margin-top: 50px;
+    }
+  }
+`;
+
+export const ContactContent = styled.div`
+  max-width: 70%;
+  margin: 0 auto;
+
+  form {
+    text-align: center;
+  }
+`;
+
+export const Social = styled.div`
+  margin: 100px 0;
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    li {
+      display: inline-block;
+
+      a {
+        display: block;
+        width: 80px;
+        height: 80px;
+        background: ${(props) => props.theme.colors.gray1};
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          background: ${(props) => props.theme.colors.gray0};
+        }
+      }
+    }
+  }
+`;
+
+export const Footer = styled.div`
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${(props) => props.theme.colors.gray0};
 `;

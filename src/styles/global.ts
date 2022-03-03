@@ -28,6 +28,12 @@ export default createGlobalStyle`
         cursor: pointer;
     }
 
+    form{
+        input, textarea{
+            margin-bottom: 10px;
+        }
+    }
+
     ::-moz-selection {
         color: ${(props) => props.theme.colors.text};
         background: ${(props) => props.theme.colors.primary};
