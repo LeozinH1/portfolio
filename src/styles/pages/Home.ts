@@ -416,6 +416,17 @@ export const Social = styled.div`
     align-items: center;
     justify-content: center;
     gap: 20px;
+    position: relative;
+
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: ${(props) => props.theme.colors.gray1};
+    }
+
     li {
       display: inline-block;
 
