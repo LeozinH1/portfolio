@@ -474,8 +474,44 @@ export const Social = styled.div`
 
     li {
       display: inline-block;
+      position: relative;
 
-      a {
+      .copiado {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        height: 50px;
+        background: ${(props) => props.theme.colors.primary};
+        position: absolute;
+        top: -70px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        transition: 0.3s;
+        opacity: 0;
+
+        &.show {
+          opacity: 1;
+        }
+
+        &:after {
+          content: "";
+          width: 16px;
+          height: 16px;
+          background: ${(props) => props.theme.colors.primary};
+          position: absolute;
+          bottom: -5px;
+          transform: rotate(45deg);
+          border-radius: 2px;
+          z-index: -1;
+        }
+      }
+
+      a,
+      button {
         display: block;
         width: 80px;
         height: 80px;
@@ -486,6 +522,7 @@ export const Social = styled.div`
         justify-content: center;
         transition: 0.2s;
         transform: scale(0.95);
+        border: none;
 
         &:hover {
           background: ${(props) => props.theme.colors.gray0};

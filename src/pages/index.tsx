@@ -120,6 +120,16 @@ const Home: NextPage = () => {
     setOpacity2(0);
   };
 
+  const [show, setShow] = useState(false);
+  const copyDiscord = () => {
+    navigator.clipboard.writeText("LeozinH1#4061");
+    setShow(true);
+
+    setTimeout(() => {
+      setShow(false);
+    }, 2000);
+  };
+
   return (
     <>
       <Head>
@@ -550,7 +560,6 @@ const Home: NextPage = () => {
                 <li>
                   <Link href="https://www.instagram.com/leosj98/">
                     <a target="_blank">
-                      {" "}
                       <Image
                         src="/instagram.svg"
                         alt="Instagram"
@@ -563,7 +572,6 @@ const Home: NextPage = () => {
                 <li>
                   <Link href="https://www.facebook.com/leosj1998/">
                     <a target="_blank">
-                      {" "}
                       <Image
                         src="/facebook.svg"
                         alt="Facebook"
@@ -574,22 +582,26 @@ const Home: NextPage = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="">
-                    <a target="_blank">
-                      {" "}
-                      <Image
-                        src="/discord.svg"
-                        alt="Discord"
-                        width={30}
-                        height={30}
-                      />
-                    </a>
-                  </Link>
+                  <span className={`copiado ${show ? "show" : ""}`}>
+                    Copiado!
+                  </span>
+
+                  <button
+                    onClick={() => {
+                      copyDiscord();
+                    }}
+                  >
+                    <Image
+                      src="/discord.svg"
+                      alt="Discord"
+                      width={30}
+                      height={30}
+                    />
+                  </button>
                 </li>
                 <li>
                   <Link href="https://github.com/leozinh1">
                     <a target="_blank">
-                      {" "}
                       <Image
                         src="/github.svg"
                         alt="Github"
