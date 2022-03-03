@@ -430,7 +430,11 @@ export const Skill = styled.div<SkillProps>`
       display: block;
       height: 100%;
       width: ${(props) => props.percentage};
-      background: ${(props) => props.theme.colors.primary};
+      background: linear-gradient(
+        to right,
+        ${(props) => props.theme.colors.primary},
+        ${(props) => props.theme.colors.primary2}
+      );
       border-radius: 5px;
     }
   }
