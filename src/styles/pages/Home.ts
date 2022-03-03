@@ -317,6 +317,7 @@ export const AboutTimeline = styled.div`
       }
 
       span {
+        font-size: 0.9rem;
       }
     }
   }

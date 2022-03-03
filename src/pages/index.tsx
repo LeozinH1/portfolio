@@ -37,6 +37,7 @@ import { Sling as Hamburger } from "hamburger-react";
 import Button from "../components/Button";
 import Input from "../components/Input";
 import Textarea from "../components/Textarea";
+import { Link as LinkAS, animateScroll as scroll } from "react-scroll";
 
 const Home: NextPage = () => {
   const [navbarClass, setNavbarClass] = useState("");
@@ -125,7 +126,7 @@ const Home: NextPage = () => {
         <title>Leozin - Portfólio</title>
       </Head>
 
-      <HomeContent>
+      <HomeContent id="section1">
         <Header>
           <Container>
             <Logo>
@@ -142,45 +143,60 @@ const Home: NextPage = () => {
                   onMouseOver={(el) => mouseOverHandle(el)}
                   onMouseOut={() => mouseOutHandle()}
                 >
-                  <Link href="">
-                    <a>home</a>
-                  </Link>
+                  <LinkAS
+                    to="section1"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                  >
+                    home
+                  </LinkAS>
                 </li>
 
                 <li
                   onMouseOver={(el) => mouseOverHandle(el)}
                   onMouseOut={() => mouseOutHandle()}
                 >
-                  <Link href="">
-                    <a>sobre</a>
-                  </Link>
+                  <LinkAS
+                    to="section2"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                  >
+                    sobre
+                  </LinkAS>
                 </li>
 
                 <li
                   onMouseOver={(el) => mouseOverHandle(el)}
                   onMouseOut={() => mouseOutHandle()}
                 >
-                  <Link href="">
-                    <a>skills</a>
-                  </Link>
+                  <LinkAS
+                    to="section3"
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                  >
+                    skills
+                  </LinkAS>
                 </li>
 
                 <li
                   onMouseOver={(el) => mouseOverHandle(el)}
                   onMouseOut={() => mouseOutHandle()}
                 >
-                  <Link href="https://github.com/LeozinH1">
-                    <a target={"_blank"}>github</a>
-                  </Link>
-                </li>
-
-                <li
-                  onMouseOver={(el) => mouseOverHandle(el)}
-                  onMouseOut={() => mouseOutHandle()}
-                >
-                  <Link href="">
-                    <a>🙋 contato</a>
-                  </Link>
+                  <LinkAS
+                    to="section4"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
+                  >
+                    🙋 contato
+                  </LinkAS>
                 </li>
 
                 <li
@@ -284,7 +300,7 @@ const Home: NextPage = () => {
         </Waves>
       </HomeContent>
 
-      <Container>
+      <Container id="section2">
         <SectionAbout>
           <SectionTitle>SOBRE MIM</SectionTitle>
 
@@ -423,7 +439,7 @@ const Home: NextPage = () => {
         </SectionAbout>
       </Container>
 
-      <SectionSkills>
+      <SectionSkills id="section3">
         <Container>
           <SectionTitle>SKILLS</SectionTitle>
           <SkillsContent>
@@ -504,7 +520,7 @@ const Home: NextPage = () => {
         </Container>
       </SectionSkills>
 
-      <SectionContact>
+      <SectionContact id="section4">
         <Container>
           <SectionTitle>CONTATO</SectionTitle>
 
