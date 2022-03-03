@@ -393,7 +393,7 @@ const Home: NextPage = () => {
             <Social>
               <ul>
                 <li>
-                  <Link href="">
+                  <Link href="https://www.linkedin.com/in/leozinh1/">
                     <a target="_blank">
                       <Image
                         src="/linkedin.svg"
@@ -405,7 +405,7 @@ const Home: NextPage = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="">
+                  <Link href="https://www.instagram.com/leosj98/">
                     <a target="_blank">
                       {" "}
                       <Image
@@ -418,7 +418,7 @@ const Home: NextPage = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="">
+                  <Link href="https://www.facebook.com/leosj1998/">
                     <a target="_blank">
                       {" "}
                       <Image
@@ -444,7 +444,7 @@ const Home: NextPage = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="">
+                  <Link href="https://github.com/leozinh1">
                     <a target="_blank">
                       {" "}
                       <Image
