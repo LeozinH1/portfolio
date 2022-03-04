@@ -396,46 +396,55 @@ type SkillProps = {
 };
 
 export const Skill = styled.div<SkillProps>`
-  h2 {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
+  display: flex;
+  gap: 10px;
   transition: 0.3s;
   transform: scale(0.97);
   border-radius: 5px;
   padding: 10px;
+  margin-bottom: 20px;
 
   &:hover {
     transform: scale(1);
     background: ${(props) => props.theme.colors.gray1};
 
-    div {
-      background: ${(props) => props.theme.colors.gray2};
+    > div {
+      > div {
+        background: ${(props) => props.theme.colors.gray2};
+      }
     }
   }
 
-  margin-bottom: 20px;
+  svg {
+    width: 30px;
+  }
 
-  div {
-    width: 100%;
-    height: 5px;
-    background: ${(props) => props.theme.colors.gray1};
-    border-radius: 5px;
-    position: relative;
+  > div {
+    h2 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-    &:after {
-      content: "";
-      display: block;
-      height: 100%;
-      width: ${(props) => props.percentage};
-      background: linear-gradient(
-        to right,
-        ${(props) => props.theme.colors.primary},
-        ${(props) => props.theme.colors.primary2}
-      );
+    div {
+      width: 100%;
+      height: 5px;
+      background: ${(props) => props.theme.colors.gray1};
       border-radius: 5px;
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: ${(props) => props.percentage};
+        background: linear-gradient(
+          to right,
+          ${(props) => props.theme.colors.primary},
+          ${(props) => props.theme.colors.primary2}
+        );
+        border-radius: 5px;
+      }
     }
   }
 `;

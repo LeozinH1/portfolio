@@ -26,6 +26,23 @@ import {
   Footer,
 } from "../styles/pages/Home";
 
+import { Javascript, Nodejs, Php } from "@styled-icons/boxicons-logos";
+import {
+  Mysql,
+  Mongodb,
+  Typescript,
+  Docker,
+  Laravel,
+  Python,
+  Adobexd,
+  Git,
+  Adobephotoshop,
+  Adobepremierepro,
+  ReactLogo,
+  Html5,
+  Css3,
+} from "@styled-icons/simple-icons";
+
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -455,75 +472,131 @@ const Home: NextPage = () => {
           <SkillsContent>
             <div>
               <Skill percentage={"95%"}>
-                <h2>HTML & CSS</h2>
-                <div></div>
+                <Html5 />
+                <div>
+                  <h2>HTML</h2>
+                  <div></div>
+                </div>
+              </Skill>
+
+              <Skill percentage={"95%"}>
+                <Css3 />
+                <div>
+                  <h2>CSS</h2>
+                  <div></div>
+                </div>
               </Skill>
 
               <Skill percentage={"90%"}>
-                <h2>Javascript</h2>
-                <div></div>
+                <Javascript />
+                <div>
+                  <h2>Javascript</h2>
+                  <div></div>
+                </div>
               </Skill>
 
               <Skill percentage={"80%"}>
-                <h2>React & Next</h2>
-                <div></div>
+                <ReactLogo />
+                <div>
+                  <h2>React & Next</h2>
+                  <div></div>
+                </div>
               </Skill>
 
               <Skill percentage={"15%"}>
-                <h2>React Native</h2>
-                <div></div>
+                <ReactLogo />
+                <div>
+                  <h2>React Native</h2>
+                  <div></div>
+                </div>
               </Skill>
             </div>
             <div>
               <Skill percentage={"95%"}>
-                <h2>Node</h2>
-                <div></div>
+                <Nodejs />
+                <div>
+                  <h2>Node</h2>
+                  <div></div>
+                </div>
               </Skill>
               <Skill percentage={"90%"}>
-                <h2>SQL</h2>
-                <div></div>
+                <Mysql />
+                <div>
+                  <h2>SQL</h2>
+                  <div></div>
+                </div>
               </Skill>
               <Skill percentage={"87%"}>
-                <h2>NoSQL</h2>
-                <div></div>
+                <Mongodb />
+                <div>
+                  <h2>NoSQL</h2>
+                  <div></div>
+                </div>
               </Skill>
               <Skill percentage={"85%"}>
-                <h2>Typescript</h2>
-                <div></div>
+                <Typescript />
+                <div>
+                  <h2>Typescript</h2>
+                  <div></div>
+                </div>
               </Skill>
               <Skill percentage={"80%"}>
-                <h2>PHP</h2>
-                <div></div>
+                <Php />
+                <div>
+                  <h2>PHP</h2>
+                  <div></div>
+                </div>
               </Skill>
               <Skill percentage={"75%"}>
-                <h2>Docker</h2>
-                <div></div>
+                <Docker />
+                <div>
+                  <h2>Docker</h2>
+                  <div></div>
+                </div>
               </Skill>
               <Skill percentage={"70%"}>
-                <h2>Laravel</h2>
-                <div></div>
+                <Laravel />
+                <div>
+                  <h2>Laravel</h2>
+                  <div></div>
+                </div>
               </Skill>
               <Skill percentage={"30%"}>
-                <h2>Python</h2>
-                <div></div>
+                <Python />
+                <div>
+                  <h2>Python</h2>
+                  <div></div>
+                </div>
               </Skill>
             </div>
             <div>
               <Skill percentage={"95%"}>
-                <h2>Adobe XD</h2>
-                <div></div>
+                <Adobexd />
+                <div>
+                  <h2>Adobe XD</h2>
+                  <div></div>
+                </div>
               </Skill>
               <Skill percentage={"80%"}>
-                <h2>Git</h2>
-                <div></div>
+                <Git />
+                <div>
+                  <h2>Git</h2>
+                  <div></div>
+                </div>
               </Skill>
               <Skill percentage={"50%"}>
-                <h2>Adobe Photoshop</h2>
-                <div></div>
+                <Adobephotoshop />
+                <div>
+                  <h2>Adobe Photoshop</h2>
+                  <div></div>
+                </div>
               </Skill>
               <Skill percentage={"40%"}>
-                <h2>Adobe Premiere</h2>
-                <div></div>
+                <Adobepremierepro />
+                <div>
+                  <h2>Adobe Premiere</h2>
+                  <div></div>
+                </div>
               </Skill>
             </div>
           </SkillsContent>
