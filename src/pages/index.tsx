@@ -43,6 +43,8 @@ import {
   Css3,
 } from "@styled-icons/simple-icons";
 
+import { Vercel } from "@styled-icons/simple-icons";
+
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -498,7 +500,15 @@ const Home: NextPage = () => {
               <Skill percentage={"80%"}>
                 <ReactLogo />
                 <div>
-                  <h2>React & Next</h2>
+                  <h2>React</h2>
+                  <div></div>
+                </div>
+              </Skill>
+
+              <Skill percentage={"78%"}>
+                <Vercel />
+                <div>
+                  <h2>Next</h2>
                   <div></div>
                 </div>
               </Skill>
