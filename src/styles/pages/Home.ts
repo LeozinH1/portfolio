@@ -248,6 +248,15 @@ export const AboutContent = styled.div``;
 
 export const About = styled.div`
   display: flex;
+
+  @media screen and (max-width: 800px) {
+    flex-flow: column;
+    gap: 40px;
+
+    > div {
+      width: 100%;
+    }
+  }
 `;
 
 export const AboutTimeline = styled.div`
@@ -463,6 +472,10 @@ export const ContactContent = styled.div`
 
   form {
     text-align: center;
+  }
+
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
   }
 `;
 
