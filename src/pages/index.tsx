@@ -557,13 +557,6 @@ const Home: NextPage = () => {
                   <div></div>
                 </div>
               </Skill>
-              <Skill percentage={"75%"}>
-                <Docker />
-                <div>
-                  <h2>Docker</h2>
-                  <div></div>
-                </div>
-              </Skill>
               <Skill percentage={"70%"}>
                 <Laravel />
                 <div>
@@ -591,6 +584,13 @@ const Home: NextPage = () => {
                 <Git />
                 <div>
                   <h2>Git</h2>
+                  <div></div>
+                </div>
+              </Skill>
+              <Skill percentage={"75%"}>
+                <Docker />
+                <div>
+                  <h2>Docker</h2>
                   <div></div>
                 </div>
               </Skill>
