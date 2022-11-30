@@ -23,7 +23,7 @@ export const Header = styled.div`
       right: 0;
       height: 80px;
       background: ${(props) => props.theme.colors.background};
-      z-index: 1;
+      z-index: 100;
       margin: 0;
       padding: 20px;
     }
@@ -341,6 +341,39 @@ export const AboutTimeline = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 800px) {
+    flex-flow: column;
+
+    ul {
+      margin-bottom: 40px;
+      margin-right: 0;
+
+      li {
+        width: 100%;
+        text-align: left;
+
+        &:not(:last-child):after {
+          //display: none;
+          right: 20px;
+        }
+
+        &.active {
+          border-radius: 5px;
+          color: ${(props) => props.theme.colors.text};
+          background: ${(props) => props.theme.colors.gray1};
+
+          &:after {
+            background: ${(props) => props.theme.colors.primary};
+          }
+        }
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
 `;
 
 export const AboutText = styled.div`
@@ -397,6 +430,11 @@ export const SkillsContent = styled.div`
 
   div {
     flex: 1;
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-flow: column;
+    gap: 0px;
   }
 `;
 
@@ -481,6 +519,7 @@ export const ContactContent = styled.div`
 
 export const Social = styled.div`
   margin: 100px 0;
+
   ul {
     list-style-type: none;
     display: flex;
@@ -489,6 +528,11 @@ export const Social = styled.div`
     gap: 20px;
     position: relative;
 
+    @media screen and (max-width: 800px) {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     &:after,
     &:before {
       content: "";
@@ -496,6 +540,10 @@ export const Social = styled.div`
       width: 100%;
       height: 1px;
       background: ${(props) => props.theme.colors.gray1};
+
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
     }
 
     li {
@@ -560,7 +608,7 @@ export const Social = styled.div`
 `;
 
 export const Footer = styled.div`
-  height: 100px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;

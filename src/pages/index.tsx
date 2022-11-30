@@ -206,7 +206,7 @@ const Home: NextPage = () => {
                     to="section3"
                     spy={true}
                     smooth={true}
-                    offset={0}
+                    offset={-60}
                     duration={500}
                   >
                     skills
@@ -354,11 +354,12 @@ const Home: NextPage = () => {
                 ></Image>
               </AboutArt>
             </About>
+
             <AboutTimeline>
               <ul ref={ulnav2}>
                 <li onClick={() => tlclick(1)} className={item1}>
                   <h2>1998</h2>
-                  <span>Spawned in the world</span>
+                  <span>Nascimento</span>
 
                   <div
                     onMouseEnter={(el) => mouseOverHandle2(el)}
