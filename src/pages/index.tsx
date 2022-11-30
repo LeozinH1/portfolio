@@ -350,7 +350,6 @@ const Home: NextPage = () => {
                   alt="Art"
                   layout="fill"
                   objectFit="contain"
-                  objectPosition="right"
                 ></Image>
               </AboutArt>
             </About>

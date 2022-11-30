@@ -387,6 +387,16 @@ export const AboutArt = styled.div`
   position: relative;
   width: 50%;
   height: 300px;
+
+  img {
+    object-position: right;
+  }
+
+  @media screen and (max-width: 800px) {
+    img {
+      object-position: center;
+    }
+  }
 `;
 
 export const SectionSkills = styled.div`
