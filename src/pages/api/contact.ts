@@ -8,8 +8,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const transporter = nodemailer.createTransport({
-    port: 465,
-    host: "smtp.gmail.com",
+    service: "hotmail",
     auth: {
       user: process.env.email,
       pass: process.env.password,
