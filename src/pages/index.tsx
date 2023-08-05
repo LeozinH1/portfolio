@@ -59,6 +59,43 @@ import Textarea from "../components/Textarea";
 import { Link as LinkAS, animateScroll as scroll } from "react-scroll";
 
 const Home: NextPage = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log("Sending");
+
+    let data = {
+      name,
+      email,
+      message,
+      subject,
+    };
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      console.log("Response received");
+      if (res.status === 200) {
+        console.log("Response succeeded!");
+        setSubmitted(true);
+        setName("");
+        setEmail("");
+        setMessage("");
+        setSubject("");
+      }
+    });
+  };
+
   const [navbarClass, setNavbarClass] = useState("");
 
   const hamburgerClick = useCallback((toggled) => {
@@ -141,7 +178,7 @@ const Home: NextPage = () => {
 
   const [show, setShow] = useState(false);
   const copyDiscord = () => {
-    navigator.clipboard.writeText("LeozinH1#4061");
+    navigator.clipboard.writeText("leozinh1");
     setShow(true);
 
     setTimeout(() => {
@@ -336,13 +373,16 @@ const Home: NextPage = () => {
           <AboutContent>
             <About>
               <AboutText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                tristique molestie enim in lacinia. Maecenas bibendum vel elit
-                ac finibus. Cras dui diam, rutrum lobortis odio a, hendrerit
-                dictum ligula. Aenean eu tincidunt nisi. Sed eget tempus mauris,
-                in rutrum libero. Mauris scelerisque ultricies odio, in gravida
-                mi pellentesque at. Praesent finibus maximus sapien ac porta.
-                Cras dapibus mollis accumsan.
+                Meu nome é <b>Leonardo</b>, e aos meus <b>25 anos</b>, sou um
+                apaixonado por tecnologia e um entusiasta do mundo da
+                programação. Como programador <b>full stack</b>, mergulhei nesse
+                universo desde meu primeiro contato com o código, e desde então,
+                tenho experimentado uma jornada fascinante. Minha paixão por
+                explorar novas possibilidades no campo da programação me
+                impulsiona todos os dias. Através de projetos desafiadores,
+                venho <b>aprimorando minhas habilidades</b> e buscando
+                conhecimento para me tornar um profissional cada vez mais
+                completo.
               </AboutText>
               <AboutArt>
                 <Image
@@ -619,11 +659,41 @@ const Home: NextPage = () => {
 
           <ContactContent>
             <form>
-              <Input type="text" placeholder="Nome completo" />
-              <Input type="text" placeholder="Assunto" />
-              <Input type="text" placeholder="Email" />
-              <Textarea placeholder="Mensagem" />
-              <Button>enviar</Button>
+              <Input
+                type="text"
+                placeholder="Nome completo"
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
+              />
+              <Input
+                type="text"
+                placeholder="Assunto"
+                onChange={(e) => {
+                  setSubject(e.target.value);
+                }}
+              />
+              <Input
+                type="text"
+                placeholder="Email"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+              />
+              <Textarea
+                placeholder="Mensagem"
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
+              />
+
+              <Button
+                onClick={(e) => {
+                  handleSubmit(e);
+                }}
+              >
+                enviar
+              </Button>
             </form>
 
             <Social>
@@ -694,13 +764,29 @@ const Home: NextPage = () => {
                     </a>
                   </Link>
                 </li>
+                <li>
+                  <Link href="mailto:leonardosj98@hotmail.com">
+                    <a target="_blank">
+                      <Image
+                        src="/email.svg"
+                        alt="Email"
+                        width={30}
+                        height={30}
+                      />
+                    </a>
+                  </Link>
+                </li>
               </ul>
             </Social>
           </ContactContent>
         </Container>
       </SectionContact>
 
-      <Footer>Desenvolvido por Leonardo S. Jaremczuk</Footer>
+      <Footer>
+        <span>
+          Desenvolvido por <b>Leonardo S. Jaremczuk</b>
+        </span>
+      </Footer>
     </>
   );
 };

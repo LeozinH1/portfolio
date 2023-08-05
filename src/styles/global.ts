@@ -34,6 +34,12 @@ export default createGlobalStyle`
         }
     }
 
+    b{
+        font-weight: 600;
+        color: ${(props) => props.theme.colors.primary};
+        text-shadow: 0px 0px 5px ${(props) => props.theme.colors.primary};
+    }
+
     ::-moz-selection {
         color: ${(props) => props.theme.colors.text};
         background: ${(props) => props.theme.colors.primary};
