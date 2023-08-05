@@ -473,14 +473,16 @@ const Home: NextPage = () => {
                   <h2>O COMEÇO DE TUDO</h2>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                    tristique molestie enim in lacinia. Maecenas bibendum vel
-                    elit ac finibus. Cras dui diam, rutrum lobortis odio a,
-                    hendrerit dictum ligula. Aenean eu tincidunt nisi. Sed eget
-                    tempus mauris, in rutrum libero. Sed eget tempus mauris, in
-                    rutrum libero. Mauris scelerisque ultricies odio, in gravida
-                    mi pellentesque at. Praesent finibus maximus sapien ac
-                    porta.
+                    Bem-vindo à minha linha do tempo pessoal! O ano de 1998
+                    marcou o início de uma jornada emocionante, quando eu vim ao
+                    mundo. Enquanto eu dava meus primeiros passos, o cenário
+                    tecnológico também estava em constante evolução. Foi nesse
+                    ano que o Google foi fundado, revolucionando a forma como
+                    acessamos informações na internet. Além disso, a Microsoft
+                    lançou o Windows 98, trazendo melhorias significativas na
+                    experiência de computação para milhões de pessoas. Esses
+                    avanços tecnológicos moldaram minha infância e abriram
+                    portas para um futuro promissor.
                   </p>
                 </div>
 
@@ -488,14 +490,13 @@ const Home: NextPage = () => {
                   <h2>ENSINO FUNDAMENTAL</h2>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                    tristique molestie enim in lacinia. Maecenas bibendum vel
-                    elit ac finibus. Cras dui diam, rutrum lobortis odio a,
-                    hendrerit dictum ligula. Aenean eu tincidunt nisi. Sed eget
-                    tempus mauris, in rutrum libero. Sed eget tempus mauris, in
-                    rutrum libero. Mauris scelerisque ultricies odio, in gravida
-                    mi pellentesque at. Praesent finibus maximus sapien ac
-                    porta.
+                    Minha jornada no ensino fundamental, entre 2004 e 2012, foi
+                    uma fase de descobertas e aprendizado inesquecíveis. Durante
+                    esses anos, tive a oportunidade de explorar diferentes áreas
+                    do conhecimento, cultivando minha curiosidade e paixão pelo
+                    aprendizado. Cada ano letivo trouxe novas amizades e
+                    experiências que contribuíram para moldar minha
+                    personalidade e visão de mundo.
                   </p>
                 </div>
 
@@ -503,14 +504,12 @@ const Home: NextPage = () => {
                   <h2>ENSINO MÉDIO</h2>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                    tristique molestie enim in lacinia. Maecenas bibendum vel
-                    elit ac finibus. Cras dui diam, rutrum lobortis odio a,
-                    hendrerit dictum ligula. Aenean eu tincidunt nisi. Sed eget
-                    tempus mauris, in rutrum libero. Sed eget tempus mauris, in
-                    rutrum libero. Mauris scelerisque ultricies odio, in gravida
-                    mi pellentesque at. Praesent finibus maximus sapien ac
-                    porta.
+                    Essa fase da minha jornada foi marcada por um intenso
+                    crescimento acadêmico e pessoal. Com disciplina e dedicação,
+                    mergulhei em estudos mais aprofundados, expandindo meus
+                    horizontes intelectuais e adquirindo novas habilidades que
+                    se mostraram valiosas até hoje. Cada desafio enfrentado
+                    tornou-se uma oportunidade para aprender e evoluir.
                   </p>
                 </div>
 
@@ -518,14 +517,14 @@ const Home: NextPage = () => {
                   <h2>ENSINO SUPERIOR</h2>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                    tristique molestie enim in lacinia. Maecenas bibendum vel
-                    elit ac finibus. Cras dui diam, rutrum lobortis odio a,
-                    hendrerit dictum ligula. Aenean eu tincidunt nisi. Sed eget
-                    tempus mauris, in rutrum libero. Sed eget tempus mauris, in
-                    rutrum libero. Mauris scelerisque ultricies odio, in gravida
-                    mi pellentesque at. Praesent finibus maximus sapien ac
-                    porta.
+                    Entre os anos de 2016 a 2019, embarquei em uma empolgante
+                    aventura no mundo da tecnologia. Durante esse período, tive
+                    a oportunidade de aprofundar meus conhecimentos em
+                    programação, bancos de dados, e outras áreas essenciais para
+                    o campo de TI. As aulas estimulantes e os projetos práticos
+                    me desafiaram a pensar de forma criativa e inovadora. Além
+                    disso, a convivência com colegas engajados em busca do mesmo
+                    objetivo criou um ambiente de aprendizado enriquecedor.
                   </p>
                 </div>
               </TimeLineText>
