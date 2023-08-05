@@ -237,11 +237,17 @@ export const Waves = styled.div`
 
 export const SectionAbout = styled.section``;
 
-export const SectionTitle = styled.h1`
+export const SectionHeader = styled.div`
   text-align: center;
   margin: 50px 0;
   font-size: 2.5rem;
   font-weight: 700;
+`;
+
+export const SectionSubtitle = styled.h3`
+  text-align: center;
+  font-size: 1.3rem;
+  color: ${(props) => props.theme.colors.gray4};
 `;
 
 export const AboutContent = styled.div``;
@@ -406,7 +412,7 @@ export const SectionSkills = styled.div`
   margin-top: 50px;
 
   ${Container} {
-    ${SectionTitle} {
+    ${SectionHeader} {
       margin-top: 50px;
     }
   }
@@ -508,7 +514,7 @@ export const Skill = styled.div<SkillProps>`
 
 export const SectionContact = styled.section`
   ${Container} {
-    ${SectionTitle} {
+    ${SectionHeader} {
       margin-top: 50px;
     }
   }

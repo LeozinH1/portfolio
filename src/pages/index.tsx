@@ -1,4 +1,6 @@
 import type { NextPage } from "next";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   Header,
   HomeText,
@@ -10,7 +12,8 @@ import {
   Main,
   HomeArt,
   SectionAbout,
-  SectionTitle,
+  SectionHeader,
+  SectionSubtitle,
   AboutContent,
   About,
   AboutTimeline,
@@ -44,7 +47,6 @@ import {
 } from "@styled-icons/simple-icons";
 
 import { Vercel } from "@styled-icons/simple-icons";
-
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -55,44 +57,56 @@ import Tilt from "react-parallax-tilt";
 import { Sling as Hamburger } from "hamburger-react";
 import Button from "../components/Button";
 import Input from "../components/Input";
-import Textarea from "../components/Textarea";
 import { Link as LinkAS, animateScroll as scroll } from "react-scroll";
 
 const Home: NextPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [subject, setSubject] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [whatsapp, setWhatsapp] = useState("");
+
+  const toastId = useRef<any>(null);
+
+  const notify = (message: string) => {
+    toastId.current = toast(message, { isLoading: true });
+  };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("Sending");
+
+    notify("Enviando informações...");
 
     let data = {
       name,
       email,
-      message,
-      subject,
+      whatsapp,
     };
 
     fetch("/api/contact", {
       method: "POST",
       headers: {
-        Accept: "application/json, text/plain, */*",
+        Accept: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      console.log("Response received");
-
-      if (res.status === 200) {
-        console.log("Response succeeded!");
-        setSubmitted(true);
+      if (res.status == 204) {
         setName("");
         setEmail("");
-        setMessage("");
-        setSubject("");
+        setWhatsapp("");
+
+        toast.update(toastId.current, {
+          render: "Enviado com sucesso!",
+          type: toast.TYPE.SUCCESS,
+          isLoading: false,
+          autoClose: 5000,
+        });
+      } else {
+        toast.update(toastId.current, {
+          render: "Error ao enviar!",
+          type: toast.TYPE.ERROR,
+          isLoading: false,
+          autoClose: 5000,
+        });
       }
     });
   };
@@ -369,7 +383,7 @@ const Home: NextPage = () => {
 
       <Container id="section2">
         <SectionAbout>
-          <SectionTitle>SOBRE MIM</SectionTitle>
+          <SectionHeader>SOBRE MIM</SectionHeader>
 
           <AboutContent>
             <About>
@@ -511,7 +525,7 @@ const Home: NextPage = () => {
 
       <SectionSkills id="section3">
         <Container>
-          <SectionTitle>SKILLS</SectionTitle>
+          <SectionHeader>SKILLS</SectionHeader>
           <SkillsContent>
             <div>
               <Skill percentage={"95%"}>
@@ -656,7 +670,12 @@ const Home: NextPage = () => {
 
       <SectionContact id="section4">
         <Container>
-          <SectionTitle>CONTATO</SectionTitle>
+          <SectionHeader>
+            PRECISA DE ALGUM SERVIÇO?
+            <SectionSubtitle>
+              Preencha o formulário abaixo. Em breve retornaremos o contato.
+            </SectionSubtitle>
+          </SectionHeader>
 
           <ContactContent>
             <form>
@@ -669,9 +688,9 @@ const Home: NextPage = () => {
               />
               <Input
                 type="text"
-                placeholder="Assunto"
+                placeholder="Whatsapp"
                 onChange={(e) => {
-                  setSubject(e.target.value);
+                  setWhatsapp(e.target.value);
                 }}
               />
               <Input
@@ -679,12 +698,6 @@ const Home: NextPage = () => {
                 placeholder="Email"
                 onChange={(e) => {
                   setEmail(e.target.value);
-                }}
-              />
-              <Textarea
-                placeholder="Mensagem"
-                onChange={(e) => {
-                  setMessage(e.target.value);
                 }}
               />
 
