@@ -81,6 +81,17 @@ const Home: NextPage = () => {
       whatsapp,
     };
 
+    if (name == "" && whatsapp == "" && email == "") {
+      toast.update(toastId.current, {
+        render: "Preencha pelo menos um campo.",
+        type: toast.TYPE.ERROR,
+        isLoading: false,
+        autoClose: 5000,
+      });
+
+      return;
+    }
+
     fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -681,7 +692,7 @@ const Home: NextPage = () => {
             <form>
               <Input
                 type="text"
-                placeholder="Nome completo"
+                placeholder="Nome Completo"
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
